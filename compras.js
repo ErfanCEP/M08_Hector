@@ -44,11 +44,16 @@ class Carrito {
   agregarProducto(producto) {
     this.productos.push(producto);
   }
-
+ /**
+   * Calcula el total del carrito sumando los totales de cada producto.
+   * @returns {number} El total del carrito.
+   */
   calcularTotalCarrito() {
     return this.productos.reduce((total, producto) => total + producto.calcularTotal(), 0);
   }
-
+/**
+   * Vacía el carrito, eliminando todos los productos.
+   */
   vaciarCarrito() {
     this.productos = [];
   }
@@ -93,13 +98,23 @@ class Usuario {
   }
 }
 
-
+// Crear una instancia de Producto para una Laptop
 const producto1 = new Producto("Laptop", 1200, 1);
+
+/** 
+ * Crear una instancia de Producto para un Mouse.
+ * @type {Producto}
+ */
 const producto2 = new Producto("Mouse", 20, 2);
 
+// Crear una instancia de Usuario con nombre y correo electrónico
 const usuario = new Usuario("Juan", "juan@example.com");
 
+// Agregar el producto1 al carrito del usuario
 usuario.agregarProductoAlCarrito(producto1);
+
+// Agregar el producto2 al carrito del usuario
 usuario.agregarProductoAlCarrito(producto2);
 
+// Finalizar la compra del usuario
 usuario.finalizarCompra();

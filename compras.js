@@ -27,18 +27,39 @@ class Carrito {
     this.productos = [];
   }
 }
-
+/**
+ *
+ *
+ * @class Usuario
+ */
 class Usuario {
+  /**
+   * Creates an instance of Usuario.
+   * @param {*} nombre
+   * @param {*} correo
+   * @memberof Usuario
+   */
   constructor(nombre, correo) {
     this.nombre = nombre;
     this.correo = correo;
     this.carrito = new Carrito();
   }
 
+  /**
+   *
+   *
+   * @param {*} producto
+   * @memberof Usuario
+   */
   agregarProductoAlCarrito(producto) {
     this.carrito.agregarProducto(producto);
   }
 
+  /**
+   *
+   *
+   * @memberof Usuario
+   */
   finalizarCompra() {
     const total = this.carrito.calcularTotalCarrito();
     console.log(`Usuario ${this.nombre} ha realizado una compra por un total de ${total}€`);

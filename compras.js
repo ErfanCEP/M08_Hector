@@ -1,19 +1,45 @@
 class Producto {
+
+
+  /**
+   * Creates an instance of Producto.
+   * @param {*} nombre
+   * @param {*} precio
+   * @param {*} cantidad
+   * @memberof Producto
+   */
   constructor(nombre, precio, cantidad) {
     this.nombre = nombre;
     this.precio = precio;
     this.cantidad = cantidad;
-  }
-
+  } 
+  /**
+   *
+   *
+   * @return {*} 
+   * @memberof Producto
+   */
   calcularTotal() {
     return this.precio * this.cantidad;
   }
 }
 
 class Carrito {
+
+  /**
+   * Creates an instance of Carrito.
+   * @memberof Carrito
+   */
   constructor() {
     this.productos = [];
   }
+
+  /**
+   *
+   *
+   * @param {*} producto
+   * @memberof Carrito
+   */
 
   agregarProducto(producto) {
     this.productos.push(producto);
